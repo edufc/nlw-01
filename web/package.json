@@ -20,13 +20,16 @@
     "react-leaflet": "^2.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.2",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start --transpileOnly --ignore-watch node_modules",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,5 +48,6 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.5"
-  }
+  },
+  "snyk": true
 }
